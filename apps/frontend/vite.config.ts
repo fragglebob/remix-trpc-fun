@@ -1,7 +1,10 @@
-import { vitePlugin as remix, cloudflareDevProxyVitePlugin as remixCloudflareDevProxy, } from "@remix-run/dev";
-import { getLoadContext } from "./load-context";
+import {
+  vitePlugin as remix,
+  cloudflareDevProxyVitePlugin as remixCloudflareDevProxy,
+} from "@remix-run/dev";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
+import { getLoadContext } from "./load-context";
 
 declare module "@remix-run/server-runtime" {
   // or cloudflare, deno, etc.
@@ -12,7 +15,9 @@ declare module "@remix-run/server-runtime" {
 
 export default defineConfig({
   plugins: [
-    remixCloudflareDevProxy<Env, IncomingRequestCfProperties>({ getLoadContext }),
+    remixCloudflareDevProxy<Env, IncomingRequestCfProperties>({
+      getLoadContext,
+    }),
     remix({
       future: {
         v3_fetcherPersist: true,

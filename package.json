@@ -1,0 +1,19 @@
+{
+  "name": "remix-trpc-fun-monorepo",
+  "private": true,
+  "packageManager": "pnpm@8.10.5",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "lint": "biome check --write",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@biomejs/biome": "1.9.3"
+  }
+}

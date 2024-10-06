@@ -6,10 +6,10 @@
 
 import type { AppLoadContext, EntryContext } from "@remix-run/cloudflare";
 import { RemixServer } from "@remix-run/react";
-import { isbot } from "isbot";
-import { renderToReadableStream } from "react-dom/server";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { httpBatchLink } from "@trpc/client";
+import { isbot } from "isbot";
+import { renderToReadableStream } from "react-dom/server";
 import { trpc } from "./trpc";
 
 const ABORT_DELAY = 5_000;
@@ -49,9 +49,8 @@ export default async function handleRequest(
   // This is ignored so we can keep it in the template for visibility.  Feel
   // free to delete this parameter in your app if you're not using it!
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  loadContext: AppLoadContext
+  loadContext: AppLoadContext,
 ) {
-
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), ABORT_DELAY);
 
@@ -65,7 +64,7 @@ export default async function handleRequest(
         console.error(error);
         finalResponseStatusCode = 500;
       },
-    }
+    },
   );
 
   body.allReady.then(() => clearTimeout(timeoutId));
