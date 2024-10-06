@@ -23,5 +23,10 @@
     "enabled": true,
     "clientKind": "git",
     "useIgnoreFile": true
+  },
+  "files": {
+    "ignore": [
+      "./worker-configuration.d.ts"
+    ]
   }
 }

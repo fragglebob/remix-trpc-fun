@@ -1,4 +1,4 @@
-import type { ActionFunctionArgs, LoaderFunctionArgs } from "@remix-run/node";
+import type { ActionFunctionArgs, LoaderFunctionArgs } from "@remix-run/cloudflare";
 import { fetchRequestHandler } from "@trpc/server/adapters/fetch";
 import { createContextFromFetch } from "~/trpc/context";
 import { appRouter } from "~/trpc/router";

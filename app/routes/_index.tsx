@@ -1,4 +1,4 @@
-import type { LoaderFunctionArgs, MetaFunction } from "@remix-run/node";
+import type { LoaderFunctionArgs, MetaFunction } from "@remix-run/cloudflare";
 import { dehydrate } from "@tanstack/react-query";
 import { Suspense, useState } from "react";
 import { trpc } from "~/trpc";
