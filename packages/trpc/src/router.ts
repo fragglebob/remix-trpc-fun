@@ -54,7 +54,7 @@ export const appRouter = router({
     .query(async (opts) => {
       const { input } = opts;
 
-      await wait(1000);
+      await wait(1500);
 
       const faker = new Faker({
         locale: en,

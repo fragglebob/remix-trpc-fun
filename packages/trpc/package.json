@@ -1,0 +1,19 @@
+{
+  "name": "remix-trpc-fun-trpc",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "main": "src/index.ts",
+  "files": [
+    "src"
+  ],
+  "scripts": {},
+  "dependencies": {
+    "@faker-js/faker": "^9.0.3",
+    "@trpc/server": "^11.0.0-rc.553",
+    "zod": "^3.23.8"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

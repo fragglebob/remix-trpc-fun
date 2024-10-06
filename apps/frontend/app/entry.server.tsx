@@ -20,13 +20,7 @@ function renderApp(
   loadContext: AppLoadContext,
 ) {
   const queryClient = loadContext.queryClient;
-  const trpcClient = trpc.createClient({
-    links: [
-      httpBatchLink({
-        url: "http://localhost:3000/trpc",
-      }),
-    ],
-  });
+  const trpcClient = loadContext.trpcClient;
 
   return (
     <trpc.Provider client={trpcClient} queryClient={queryClient}>

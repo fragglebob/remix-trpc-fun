@@ -1,5 +1,5 @@
 {
-  "name": "remix-trpc-run-app-frontend",
+  "name": "remix-trpc-fun-app-frontend",
   "private": true,
   "sideEffects": false,
   "type": "module",
@@ -15,6 +15,7 @@
     "cf-typegen": "wrangler types"
   },
   "dependencies": {
+    "remix-trpc-fun-trpc": "workspace:*",
     "@faker-js/faker": "^9.0.3",
     "@remix-run/cloudflare": "^2.12.1",
     "@remix-run/cloudflare-pages": "^2.12.1",

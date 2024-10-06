@@ -16,6 +16,7 @@ declare module "@remix-run/server-runtime" {
 export default defineConfig({
   plugins: [
     remixCloudflareDevProxy<Env, IncomingRequestCfProperties>({
+      // @ts-expect-error: the ASSETS env thing that is made for pages things i CBA to type right now
       getLoadContext,
     }),
     remix({
