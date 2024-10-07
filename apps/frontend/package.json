@@ -4,8 +4,8 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build": "remix vite:build",
-    "deploy": "npm run build && wrangler pages deploy",
+    "build": "remix vite:build && wrangler pages functions build --outdir build/worker",
+    "deploy": "npm run build && wrangler deploy",
     "dev": "remix vite:dev",
     "lint": "biome check --write",
     "start": "wrangler pages dev ./build/client",
